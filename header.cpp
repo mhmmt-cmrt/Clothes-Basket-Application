@@ -1,4 +1,4 @@
-//  this project was created by muhammet
+//  this project was created by muhammet cÃ¶mert
 
 #include<iostream>
 #include<iomanip>
@@ -71,12 +71,12 @@ Kullanici::Kullanici()
 		 << "indirimKodu, dogumTarihi eksiksiz girin" << endl;
 }
 
-Kullanici::Kullanici(const string ad, const string soyad, const string telNo, const string _KullaniciAdý,
+Kullanici::Kullanici(const string ad, const string soyad, const string telNo, const string _KullaniciAdÃ½,
 					 const string _ePosta, const string _adresIlce, const string _sifre,
 					 const string _dogumTarihi , const string _indirimKodu)
 	:Kisi(ad,soyad,telNo)
 {
-	setKullaniciAdý(_KullaniciAdý);
+	setKullaniciAdÃ½(_KullaniciAdÃ½);
 	setEPosta(_ePosta);
 	setAdresIlce(_adresIlce);
 	setSifre(_sifre);
@@ -88,14 +88,14 @@ Kullanici::~Kullanici()
 {
 }
 
-void Kullanici::setKullaniciAdý(const string _KullaniciAdý)
+void Kullanici::setKullaniciAdÃ½(const string _KullaniciAdÃ½)
 {
-		this->kullaniciAdý = _KullaniciAdý;
+		this->kullaniciAdÃ½ = _KullaniciAdÃ½;
 }
 
-string Kullanici::getKullaniciAdý() const
+string Kullanici::getKullaniciAdÃ½() const
 {
-	return this->kullaniciAdý;
+	return this->kullaniciAdÃ½;
 }
 
 void Kullanici::setEPosta(const string _ePosta)
@@ -108,14 +108,14 @@ string Kullanici::getEPosta() const
 	return this->ePosta;
 }
 
-void Kullanici::setAdresIlce(const string _adresÝlce)
+void Kullanici::setAdresIlce(const string _adresÃlce)
 {
-	this->adresÝlce = _adresÝlce;
+	this->adresÃlce = _adresÃlce;
 }
 
 string Kullanici::getAdresIlce() const
 {
-	return this->adresÝlce;
+	return this->adresÃlce;
 }
 
 void Kullanici::setSifre(const string _sifre)
@@ -169,7 +169,7 @@ string Yonetici::getSifre() const
 {
 	return this->y_Sifre;
 }
-//--------------------Yönetici sinifi sonu--------------------------------------
+//--------------------YÃ¶netici sinifi sonu--------------------------------------
 Zaman::Zaman()
 {
 	setSaat(0);
@@ -201,7 +201,7 @@ Zaman Zaman::operator+(int _iDakika) //saate dakika ekler
 	return temp;
 
 }
-int Zaman::operator-(Zaman& zaman) //iki saat arasý mesaffeyi dakika cinsinden bulur
+int Zaman::operator-(Zaman& zaman) //iki saat arasÃ½ mesaffeyi dakika cinsinden bulur
 {
 
 	int aDakika = this->dakika + this->saat * 60;
@@ -209,7 +209,7 @@ int Zaman::operator-(Zaman& zaman) //iki saat arasý mesaffeyi dakika cinsinden b
 
 	return aDakika - bDakika;
 }
-bool Zaman::operator < (Zaman & zaman) //hangi saatin ilerde olduðunu bulmak için kullanýlýr
+bool Zaman::operator < (Zaman & zaman) //hangi saatin ilerde olduÃ°unu bulmak iÃ§in kullanÃ½lÃ½r
 {
 	int aDakika = this->dakika + this->saat * 60;
 	int bDakika = zaman.dakika + zaman.saat * 60;
@@ -217,7 +217,7 @@ bool Zaman::operator < (Zaman & zaman) //hangi saatin ilerde olduðunu bulmak içi
 	return aDakika < bDakika;
 }
 
-void Zaman::operator = (string a) //stringi ayrýþtýrýr saate atar.
+void Zaman::operator = (string a) //stringi ayrÃ½Ã¾tÃ½rÃ½r saate atar.
 {
 	this->saat = stoi(a.substr(0, 2));
 	this->dakika = stoi(a.substr(3, 2));
@@ -304,13 +304,13 @@ int Kurye::getSiparisNumaralari() const
 {
 	return siparisNo;
 }
-void Kurye::setDagitimBitisler(Zaman & _dagitim_Bitiþler)
+void Kurye::setDagitimBitisler(Zaman & _dagitim_BitiÃ¾ler)
 {
-	this->dagitim_Bitiþler = _dagitim_Bitiþler;
+	this->dagitim_BitiÃ¾ler = _dagitim_BitiÃ¾ler;
 }
 Zaman Kurye::getDagitimBitisler() const
 {
-	return this->dagitim_Bitiþler;
+	return this->dagitim_BitiÃ¾ler;
 }
 //--------------------Kurye sinifi sonu--------------------------------------
 
@@ -376,7 +376,7 @@ string Kiyafet::getRenk() const
 {
 	return this->renk;
 }
-//-----------------------------Kiyafet sýnýfý sonu----------------------
+//-----------------------------Kiyafet sÃ½nÃ½fÃ½ sonu----------------------
 Siparis::Siparis()
 {
 	cout << "hatali giris"
@@ -429,11 +429,11 @@ Zaman Siparis::getSiparisUlasim() const
 {
 	return this->siparis_Ulasim;
 }
-//-----------------------------Siparis sýnýfý sonu-----------------------------------------------
+//-----------------------------Siparis sÃ½nÃ½fÃ½ sonu-----------------------------------------------
 
 void islemler(int islem)
 {
-	if (islem == 1)                  // giriþ yapma iþlemleri
+	if (islem == 1)                  // giriÃ¾ yapma iÃ¾lemleri
 	{
 		int profil;
 		etiketProfilsec:
@@ -446,7 +446,7 @@ void islemler(int islem)
 
 		if (!(profil < 3 && profil > 0)) { goto etiketProfilsec;}
 
-		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>yonetici girisi iþlemleri<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>yonetici girisi iÃ¾lemleri<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 		//#######################################################################################
 
 		if (profil == 1)			
@@ -472,13 +472,13 @@ void islemler(int islem)
 			}
 			ifDosya1.close();
 
-			if (sifre == m_sifre)							 ////Yönetici girisi dogrulama
+			if (sifre == m_sifre)							 ////YÃ¶netici girisi dogrulama
 			{
 				system("CLS");
 				system("color 9e");
 				cout << "Giris basarili" << endl;
 				Yonetici yonetici(ad,soyad, tel, m_sifre);
-				//Yönetici islemlerini gerçekleþtirme
+				//YÃ¶netici islemlerini gerÃ§ekleÃ¾tirme
 				etiketYoneticiIslemSecme:
 				int task;
 				cout << "Yapmak Istediginiz Islemi Secer misiniz" << endl;
@@ -490,7 +490,7 @@ void islemler(int islem)
 				cout << "-> [5] Siparislerin Faturalarini goruntule" << endl;
 				cout << "############################################\n";
 				cout << "->"; cin >> task;
-				//---------------------------***** ürün girisi yapýlan kýsým ******--------------
+				//---------------------------***** Ã¼rÃ¼n girisi yapÃ½lan kÃ½sÃ½m ******--------------
 				if (task == 1)
 				{
 					int m_iKategori;
@@ -596,7 +596,7 @@ void islemler(int islem)
 
 					if (deger == 1) { goto etiketKategori; }
 				}				
-				//------------------***** kurye ekleme yapýlan kýsým ******----------------------
+				//------------------***** kurye ekleme yapÃ½lan kÃ½sÃ½m ******----------------------
 			    else if (task == 2)  
 				{
 					string k_Ad, k_Soyad, k_Tel, strData;
@@ -632,7 +632,7 @@ void islemler(int islem)
 						<< zaman<<endl;
 					ofDosyaKurye.close();
 				}
-				//----------------***** sikayet öneri okunan kýsým *****-------------------------
+				//----------------***** sikayet Ã¶neri okunan kÃ½sÃ½m *****-------------------------
 				else if (task == 3) 
 				{
 					string strData;
@@ -654,7 +654,7 @@ void islemler(int islem)
 					}
 					cout << endl;
 				}
-				//-----------------***** indirim kodu tanýmlamasý yapýlan kýsým *****------------
+				//-----------------***** indirim kodu tanÃ½mlamasÃ½ yapÃ½lan kÃ½sÃ½m *****------------
 				else if (task == 4)											
 				{
 					string yeniIndirimKodu, aranilanKullanici;
@@ -685,12 +685,12 @@ void islemler(int islem)
 						ifDosya16.open("Kullanicilar.txt");
 						ofDosya17.open("deneme1.txt", ios::app);
 						//---------------------------
-						while (ifDosya16 >> ad)                 //adý oku
+						while (ifDosya16 >> ad)                 //adÃ½ oku
 						{
 							ofDosya17 << left << setw(20) << ad;
 							ifDosya16 >> soyad; ofDosya17 << setw(20) << soyad;    //soyad okuyaz
 							ifDosya16 >> telNo; ofDosya17 << setw(20) << telNo;    //telno okuyaz
-							ifDosya16 >> kullaniciAdi;						     //k_adý
+							ifDosya16 >> kullaniciAdi;						     //k_adÃ½
 
 							if (kullaniciAdi == aranilanKullanici)
 							{
@@ -703,7 +703,7 @@ void islemler(int islem)
 							}
 							else
 							{
-								ofDosya17 << setw(20) << kullaniciAdi;                                   //k adý yaz
+								ofDosya17 << setw(20) << kullaniciAdi;                                   //k adÃ½ yaz
 								ifDosya16 >> ePosta;	  ofDosya17 << setw(20) << ePosta;			     //eposta
 								ifDosya16 >> adresIlce;   ofDosya17 << setw(20) << adresIlce;			 //adresilce
 								ifDosya16 >> sifre;       ofDosya17 << setw(20) << sifre;
@@ -721,7 +721,7 @@ void islemler(int islem)
 					}
 					cout << "Indirim kodunuz tanimlanmistir..!!!" << endl<<endl;
 				}
-				//-------------------------***** fatura görüntülenmesi yapýlan kýsým *****-------
+				//-------------------------***** fatura gÃ¶rÃ¼ntÃ¼lenmesi yapÃ½lan kÃ½sÃ½m *****-------
 				else if (task == 5)										
 				{
 					cout << "##############################################################" << endl;					
@@ -756,15 +756,15 @@ void islemler(int islem)
 				goto etiketYoneticigiris;
 			}
 		}
-		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>musteri girisi iþlemleri<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>musteri girisi iÃ¾lemleri<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 		//#######################################################################################
 		if (profil == 2)				      
 		{
 			etiketMusteriGiris:
-			string ad;				  //dosyadan okunacak verilerin atanacagý data memberlar.
+			string ad;				  //dosyadan okunacak verilerin atanacagÃ½ data memberlar.
 			string soyad;
 			string telNo;
-			string kullaniciAdý;               
+			string kullaniciAdÃ½;               
 			string ePosta;
 			string adresIlce;
 			string k_sifre;
@@ -772,7 +772,7 @@ void islemler(int islem)
 			string dogumTarihi;
 			bool eslesmeDurumu = false;
 
-			string k_adi;					 //kontrol için kullanýcýdan alýnan degerler
+			string k_adi;					 //kontrol iÃ§in kullanÃ½cÃ½dan alÃ½nan degerler
 			string k_sfr;
 
 			cout << "Hosgeldiniz...!" << endl;
@@ -789,21 +789,21 @@ void islemler(int islem)
 			{
 				ifDosya5 >> soyad;
 				ifDosya5 >> telNo;
-				ifDosya5 >> kullaniciAdý;
+				ifDosya5 >> kullaniciAdÃ½;
 				ifDosya5 >> ePosta;
 				ifDosya5 >> adresIlce;
 				ifDosya5 >> k_sifre;
 				ifDosya5 >> dogumTarihi;
 				ifDosya5 >> indirimKodu;
 
-				if ((k_adi == kullaniciAdý) && (k_sfr == k_sifre))   //musteri girisi dogrulama
+				if ((k_adi == kullaniciAdÃ½) && (k_sfr == k_sifre))   //musteri girisi dogrulama
 				{
 					system("CLS");
 					system("color 9e");
 					ifDosya5.close();
 					eslesmeDurumu = true;
 					cout << ">>>>>>>>>>>>>>>Giris basarili<<<<<<<<<<<<<<<<" << endl;
-					Kullanici kullanici(ad, soyad, telNo, kullaniciAdý, ePosta, 
+					Kullanici kullanici(ad, soyad, telNo, kullaniciAdÃ½, ePosta, 
 						                adresIlce, k_sifre, dogumTarihi, indirimKodu);
 
 					system("CLS");
@@ -819,7 +819,7 @@ void islemler(int islem)
 					cout << "############################################\n";
 					cout << "->"; cin >> task;
 
-					//------------***** kýyafet kategörilerinin gösterimi ve ürün secimi *****-----------------
+					//------------***** kÃ½yafet kategÃ¶rilerinin gÃ¶sterimi ve Ã¼rÃ¼n secimi *****-----------------
 
 					if (task == 1)  
 					{
@@ -866,14 +866,14 @@ void islemler(int islem)
 						else { cout << "hatali deger girildi. Tekrar deneyin\n"; goto etiketKategoriSec; }
 
 						system("CLS");
-						int urunNo;//ürün secim icin
+						int urunNo;//Ã¼rÃ¼n secim icin
 						cout << "Satin alinmak istenilen urunun numarasini girin."<<endl;
 						cout << "###########################################################" << endl;
 						cout << left << setw(12) << "Urunun No" << setw(20) << "Urunun Kategorisi"
 							<< setw(20) << "Urunun Ismi"
 							<< setw(20) << "Urunun Fiyati"<< endl;
 
-						int i = 0;//indis icin  //Ürün Secimi için ürünün satir nosu alinan kisim
+						int i = 0;//indis icin  //ÃœrÃ¼n Secimi iÃ§in Ã¼rÃ¼nÃ¼n satir nosu alinan kisim
 						ifstream ifDosya6;                
 						ifDosya6.open(dosyaAdi);
 						while (ifDosya6 >> strData)  // verileri okur
@@ -887,7 +887,7 @@ void islemler(int islem)
 						ifDosya6.close();
 						cin >> urunNo;
 						//--------------------------------------------------------
-						int urunBedenNo;//beden secim icin  //Beden Secimi için bedenin satir nosu alinan kisim
+						int urunBedenNo;//beden secim icin  //Beden Secimi iÃ§in bedenin satir nosu alinan kisim
 						cout << "Urun icin beden seciniz" <<endl;
 						cout << "#############################################"<<endl;
 						cout << left << setw(12) << "Urunun No" << setw(20) << "Urunun Ismi"
@@ -906,7 +906,7 @@ void islemler(int islem)
 						ifDosyaBeden.close();
 						cin >> urunBedenNo;
 						//-------------------------------------------------------------
-						int urunRenkNo;//renk secim icin  //Renk Secimi için Renk satir nosu alinan kisim
+						int urunRenkNo;//renk secim icin  //Renk Secimi iÃ§in Renk satir nosu alinan kisim
 						cout << "Urun icin renk seciniz" << endl;
 						cout << "#############################################" << endl;;
 						cout << left << setw(12) << "Urunun No" << setw(20) << "Urunun Ismi"
@@ -924,7 +924,7 @@ void islemler(int islem)
 						}
 						ifDosyaRenk.close();
 						cin >> urunRenkNo;
-						//alinan satir numaralarina göre ürünü secen ve faturasýný dosyaya kaydeden fonksiyon
+						//alinan satir numaralarina gÃ¶re Ã¼rÃ¼nÃ¼ secen ve faturasÃ½nÃ½ dosyaya kaydeden fonksiyon
 						urunSecimi(kullanici,kategori,urunNo, urunBedenNo, urunRenkNo);
 						cout << "###################################################" << endl;
 						cout << "Urun sepetinize eklenmistir" << endl;
@@ -936,8 +936,8 @@ void islemler(int islem)
 						cin >> secim;
 						if (secim == 1) { system("CLS"); goto etiketKategoriSec; }
 
-						//müsteriye fatura gösteren kisim
-						cout << "###################################################" << endl; //Fatura gösterme						
+						//mÃ¼steriye fatura gÃ¶steren kisim
+						cout << "###################################################" << endl; //Fatura gÃ¶sterme						
 						cout <<setw(10) <<"Adi" <<setw(10)<<"Soyadi" << setw(10) <<"Kategori" 
 							 << setw(20) <<"Kiyafet_Adi" << setw(10) <<"Fiyat" << setw(10) 
 							 <<"Beden" << setw(10) <<"Renk" << setw(20) <<"Saat~Tarih" << endl;
@@ -949,7 +949,7 @@ void islemler(int islem)
 						while(ifDosya13 >> faturaAd)  // verileri okur
 						{
 							ifDosya13 >> faturaSoyad;
-							if ((faturaAd == kullanici.getAd()) && (faturaSoyad == kullanici.getSoyad())) //aranan satýr buysa
+							if ((faturaAd == kullanici.getAd()) && (faturaSoyad == kullanici.getSoyad())) //aranan satÃ½r buysa
 							{
 								cout << setw(10) << faturaAd;
 								cout << setw(10) << faturaSoyad;
@@ -974,7 +974,7 @@ void islemler(int islem)
 						cout << endl << "TOPLAM UCRET : " << total << "TL" << endl;
 
 						//----------------------------------------------------------------------------------
-						//siparis oluþturulan kýsým.
+						//siparis oluÃ¾turulan kÃ½sÃ½m.
 						
 						string adres; int sure = 0;
 						adres = kullanici.getAdresIlce();
@@ -987,21 +987,21 @@ void islemler(int islem)
 						else if (adres == "Arsin")     { sure = 70; }
 						else if (adres == "Arakli")    { sure = 100;}
 
-						int enYakýnKuryeNo;
+						int enYakÃ½nKuryeNo;
 						int eklemeDurumu = 0;
 						bool aradeger = true;
-						//dosyadan okulanacak verilerin kaydedileceði datalar
+						//dosyadan okulanacak verilerin kaydedileceÃ°i datalar
 						string adVeri,soyadVeri,telVeri, kuryeNo, kuryeBitis;
-						Zaman kuryeZaman; //kurye zamaný 
+						Zaman kuryeZaman; //kurye zamanÃ½ 
 						Zaman sistemZaman; //sistem saati
-						Zaman tempZaman; //yeni ulasým saati
+						Zaman tempZaman; //yeni ulasÃ½m saati
 						int enYakinKuryeZamani = 1440; //60*24
 						sistemZaman.sistemSaatiniAl();
 
 						ifstream ifDosyaKurye;       //dosya nesnesi olusturuluyor
 						ofstream ofYeniKuryeDosya;
 
-						ofYeniKuryeDosya.open("Deneme.txt",ios::app); //kuryenin yeni ulaþým zamaný için kullanýlacak
+						ofYeniKuryeDosya.open("Deneme.txt",ios::app); //kuryenin yeni ulaÃ¾Ã½m zamanÃ½ iÃ§in kullanÃ½lacak
 						ifDosyaKurye.open("Kuryeler.txt");
 
 						while (ifDosyaKurye >> adVeri)  // verileri okur
@@ -1019,16 +1019,16 @@ void islemler(int islem)
 									eklemeDurumu++;
 									tempZaman = (sistemZaman + sure);
 									ofYeniKuryeDosya <<right<<setfill('0') << setw(2)<<tempZaman.getSaat() << ":" 
-										             <<setw(2)<<tempZaman.getDakika()<< setfill(' ') << endl; //yeni ulasým zamaný
+										             <<setw(2)<<tempZaman.getDakika()<< setfill(' ') << endl; //yeni ulasÃ½m zamanÃ½
 									string sis_zam;
 									sis_zam = to_string(sistemZaman.getSaat()) + ":" + to_string(sistemZaman.getDakika());
 									ofstream ofDosyaSiparis;       //siparis txt
 									ofDosyaSiparis.open("Siparisler.txt", ios::app); //dosya acma
 									ofDosyaSiparis << left
-										<< setw(20) << kuryeNo //kurye no (zamaný sistem zamanýndan küçük olanlarýn ilki)
-										<< setw(20) << adres //varýþ noktasý
-										<< setw(20) << sis_zam//siparis baþlangýç zamaný + //operator overloading //20 geniþliðinden dolayý cast yaptýk
-										<< setw(20) << sure //süre
+										<< setw(20) << kuryeNo //kurye no (zamanÃ½ sistem zamanÃ½ndan kÃ¼Ã§Ã¼k olanlarÃ½n ilki)
+										<< setw(20) << adres //varÃ½Ã¾ noktasÃ½
+										<< setw(20) << sis_zam//siparis baÃ¾langÃ½Ã§ zamanÃ½ + //operator overloading //20 geniÃ¾liÃ°inden dolayÃ½ cast yaptÃ½k
+										<< setw(20) << sure //sÃ¼re
 										<<right<<setfill('0') << setw(2) << tempZaman.getSaat() <<":" 
 										                      << setw(2) << tempZaman.getDakika() << setfill(' ') << endl;  //operator overloading
 									ofDosyaSiparis.close(); //dosya kapama
@@ -1061,11 +1061,11 @@ void islemler(int islem)
 						Zaman kuryeZaman1;
 						Zaman tempZaman1;
 
-						if (eklemeDurumu == 0)  //yukarýda kurye ekleme olmadýysa en yakýný ekleyen kod
+						if (eklemeDurumu == 0)  //yukarÃ½da kurye ekleme olmadÃ½ysa en yakÃ½nÃ½ ekleyen kod
 						{
 							ifstream ifDosyaKurye1;       //dosya nesnesi olusturuluyor
 							ofstream ofYeniKuryeDosya1;
-							ofYeniKuryeDosya1.open("Deneme1.txt", ios::app); //kuryenin yeni ulaþým zamaný için kullanýlacak
+							ofYeniKuryeDosya1.open("Deneme1.txt", ios::app); //kuryenin yeni ulaÃ¾Ã½m zamanÃ½ iÃ§in kullanÃ½lacak
 							ifDosyaKurye1.open("Kuryeler.txt");
 							while (ifDosyaKurye1 >> adVeri1)  // verileri okur
 							{
@@ -1077,20 +1077,20 @@ void islemler(int islem)
 								kuryeZaman1 = kuryeBitis1;
 								if (enYakinKuryeZamani == (kuryeZaman1 - sistemZaman))   //operator overloading
 								{
-									if (aradeger1)//eger ayný saat birden çoksa sadece ilk eþlesen degeri alýr
+									if (aradeger1)//eger aynÃ½ saat birden Ã§oksa sadece ilk eÃ¾lesen degeri alÃ½r
 									{
 										tempZaman1 = (kuryeZaman1 + sure);
 										ofYeniKuryeDosya1<<right<< setfill('0') << setw(2) << tempZaman1.getSaat() << ":" 
-											             << setw(2) << tempZaman1.getDakika() << setfill(' ') << endl; //yeni ulasým zamaný
+											             << setw(2) << tempZaman1.getDakika() << setfill(' ') << endl; //yeni ulasÃ½m zamanÃ½
 										string zam;
 										zam = to_string(sistemZaman.getSaat()) + ":" + to_string(sistemZaman.getDakika());
 										ofstream ofDosyaSiparis1;       //siparis txt
 										ofDosyaSiparis1.open("Siparisler.txt", ios::app); //dosya acma
 										ofDosyaSiparis1 << left
-											<< setw(20) << kuryeNo1 //kurye no (zamaný sistem zamanýndan küçük olanlarýn ilki)
-											<< setw(20) << adres //varýþ noktasý
-											<< setw(20) << zam//siparis baþlangýç zamaný  +  //operator overloading
-											<< setw(20) << sure //süre
+											<< setw(20) << kuryeNo1 //kurye no (zamanÃ½ sistem zamanÃ½ndan kÃ¼Ã§Ã¼k olanlarÃ½n ilki)
+											<< setw(20) << adres //varÃ½Ã¾ noktasÃ½
+											<< setw(20) << zam//siparis baÃ¾langÃ½Ã§ zamanÃ½  +  //operator overloading
+											<< setw(20) << sure //sÃ¼re
 											<<right<< setfill('0') << setw(2) << tempZaman1.getSaat() << ":" 
 											<< setw(2) << tempZaman1.getDakika() << setfill(' ') << endl;  //operator overloading
 										ofDosyaSiparis1.close(); //dosya kapama
@@ -1123,7 +1123,7 @@ void islemler(int islem)
 					else if (task == 2)  
 					{						
 					    int sayac = 0;
-						cout << "########################################################"; //Fatura gösterme	
+						cout << "########################################################"; //Fatura gÃ¶sterme	
 						cout << "########################################################" << endl;
 						cout << left<<setw(15) << "Siparis_NO" << setw(15) << "Kurye_No" 
 							 << setw(20) << "Varis_Noktasi" << setw(20) << "Baslangic_Zamani"
@@ -1144,7 +1144,7 @@ void islemler(int islem)
 						ifDosyaSiparisTakip.close(); //dosya kapama
 					}
 
-					//--------------***** sikayet öneri yapýlan kýsým *****---------------------
+					//--------------***** sikayet Ã¶neri yapÃ½lan kÃ½sÃ½m *****---------------------
 
 					else if (task == 3)  
 					{
@@ -1172,7 +1172,7 @@ void islemler(int islem)
 						sikayetfile.close();
 					}
 
-					///-------------***** sifre deðiþimi yapýlan kýsým *****----------------------
+					///-------------***** sifre deÃ°iÃ¾imi yapÃ½lan kÃ½sÃ½m *****----------------------
 
 					else if (task == 4)  
 					{
@@ -1190,7 +1190,7 @@ void islemler(int islem)
 						cout << "Yeni Sifrenizi girin" << endl;
 						cout << "->"; cin >> yeniSifre;
 
-						//(ad, soyad, telNo, kullaniciAdý, ePosta, adresIlce, k_sifre, dogumTarihi, indirimKodu);
+						//(ad, soyad, telNo, kullaniciAdÃ½, ePosta, adresIlce, k_sifre, dogumTarihi, indirimKodu);
 						ifstream mevcutDosya;
 						ofstream yeniDosya;
 						mevcutDosya.open("Kullanicilar.txt", ios::in);
@@ -1200,7 +1200,7 @@ void islemler(int islem)
 							yeniDosya << left << setw(20) << ad;
 							mevcutDosya >> soyad; yeniDosya << setw(20) << soyad;    //soyad okuyaz
 							mevcutDosya >> telNo; yeniDosya << setw(20) << telNo;    //telno okuyaz
-							mevcutDosya >> kullaniciAdi;						     //k_adý
+							mevcutDosya >> kullaniciAdi;						     //k_adÃ½
 
 							if (kullaniciAdi == kul_adi)
 							{
@@ -1217,7 +1217,7 @@ void islemler(int islem)
 							}
 							else 
 						    {
-								yeniDosya << setw(20) << kullaniciAdi;                                      //k adý yaz
+								yeniDosya << setw(20) << kullaniciAdi;                                      //k adÃ½ yaz
 								mevcutDosya >> ePosta;		yeniDosya << setw(20) << ePosta;			    //eposta
 								mevcutDosya >> adresIlce;   yeniDosya << setw(20) << adresIlce;			    //adresilce
 								mevcutDosya >> sifre;       yeniDosya << setw(20) << sifre;			        //k_sifre
@@ -1232,7 +1232,7 @@ void islemler(int islem)
 						int b = rename("deneme.txt", dosya.c_str());
 					}
 
-					//--------------***** geri dönus menüsü *****---------------------------------
+					//--------------***** geri dÃ¶nus menÃ¼sÃ¼ *****---------------------------------
 
 					else if (task == 5)  
 					{
@@ -1249,7 +1249,7 @@ void islemler(int islem)
 			}
 		}		
 	}
-	//>>>>>>>>>>>>>>>>>>>>>>>>>>>> Uye kaydi iþlemleri<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+	//>>>>>>>>>>>>>>>>>>>>>>>>>>>> Uye kaydi iÃ¾lemleri<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     //###################################################################################
 
 	if (islem == 2)                            //uye kaydinin yapildigi blok
@@ -1258,7 +1258,7 @@ void islemler(int islem)
 		string ad;
 		string soyad;
 		string telNo;
-		string kullaniciAdý;                   //uye degiskenler tanimlaniyor
+		string kullaniciAdÃ½;                   //uye degiskenler tanimlaniyor
 		string ePosta;
 		string adresIlce;
 		string k_sifre;
@@ -1278,7 +1278,7 @@ void islemler(int islem)
 		cout << "->"; cin >> telNo;
 		cout << "---------------------------------------------------\n";
 		cout << "-> Sistem Girisi icin Kullanici Adi Belirleyin." << endl;
-		cout << "->"; cin >> kullaniciAdý;
+		cout << "->"; cin >> kullaniciAdÃ½;
 		cout << "---------------------------------------------------\n";
 		cout << "-> Adres Ilcenizin kodunu secin" << endl;
 		adresIlce = adresIlceSec();
@@ -1358,7 +1358,7 @@ void islemler(int islem)
 				else
 				{
 					cout.put('*');
-					str.push_back(ch); //sifreye ekleme kýsmý
+					str.push_back(ch); //sifreye ekleme kÃ½smÃ½
 				}
 				if (str.length() >= 12)    //maximum uzunluk
 				{
@@ -1373,7 +1373,7 @@ void islemler(int islem)
 		if (sonuc == false){goto etiketSifre;}
 		else {k_sifre = str;}
 		
-		Kullanici kul(ad, soyad, telNo, kullaniciAdý, ePosta, adresIlce, k_sifre, dogumTarihi, indirimKodu);
+		Kullanici kul(ad, soyad, telNo, kullaniciAdÃ½, ePosta, adresIlce, k_sifre, dogumTarihi, indirimKodu);
 
 		cout << "Kaydiniz Isleme Aliniyor....!!!" << endl;
 
@@ -1384,7 +1384,7 @@ void islemler(int islem)
 						<< setw(20) << kul.getAd()
 						<< setw(20) << kul.getSoyad()
 						<< setw(20) << kul.getTelefonNo()
-						<< setw(20) << kul.getKullaniciAdý()
+						<< setw(20) << kul.getKullaniciAdÃ½()
 						<< setw(20) << kul.getEPosta()
 						<< setw(20) << kul.getAdresIlce()
 						<< setw(20) << kul.getSifre()
@@ -1395,12 +1395,12 @@ void islemler(int islem)
 	}
 }
 
-bool ePosta_Check(std::string ePosta) // eposta degerini regex e göre kontrol eder.
+bool ePosta_Check(std::string ePosta) // eposta degerini regex e gÃ¶re kontrol eder.
 {
 	const regex pattern("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
 	return regex_match(ePosta, pattern);
 }
-bool tarihKontrol(int gun, int ay, int yil)			// gun ay yýl degerini kontrol eder.
+bool tarihKontrol(int gun, int ay, int yil)			// gun ay yÃ½l degerini kontrol eder.
 {
 	int i = 0;
 	int const aySayisi = 12;
@@ -1427,7 +1427,7 @@ bool tarihKontrol(int gun, int ay, int yil)			// gun ay yýl degerini kontrol ede
 	else{return false;}
 }
 
-bool sifreKontrol(string sifre)               //girilen sifrenin güclü olma durumunu kontrol eder.
+bool sifreKontrol(string sifre)               //girilen sifrenin gÃ¼clÃ¼ olma durumunu kontrol eder.
 {
 	char temp;
 	bool hasLow, hasUpp, hasdigit, hasSpace;
@@ -1553,23 +1553,23 @@ void urunSecimi(Kullanici &kullanici, int m_iKategori, int urunNo, int bedenNo, 
 	ifDosya10.open(dosyaAdi);
 	while (ifDosya10 >> strData)  // verileri okur
 	{
-		if (deger == urunNo) //aranan satýr buysa
+		if (deger == urunNo) //aranan satÃ½r buysa
 		{
 			m_sKategori = strData;
 			ifDosya10 >> strData; m_kiyafet_Adi = strData;
 			ifDosya10 >> strData; m_fiyat = stod(strData);
 
 			string araDeger;
-			ifstream ifDosyaÝndirimKodlari;
-			ifDosyaÝndirimKodlari.open("indirimKodlari.txt");
-			while (ifDosyaÝndirimKodlari >> araDeger) //indirim kodunun kontrol edildigi kisim
+			ifstream ifDosyaÃndirimKodlari;
+			ifDosyaÃndirimKodlari.open("indirimKodlari.txt");
+			while (ifDosyaÃndirimKodlari >> araDeger) //indirim kodunun kontrol edildigi kisim
 			{
 				if (kullanici.getIndirimKodu() == araDeger)
 				{
 					m_fiyat = m_fiyat - (m_fiyat * 50 / 100);
 				}
 			}
-			ifDosyaÝndirimKodlari.close();
+			ifDosyaÃndirimKodlari.close();
 			break;
 		}
 		else
@@ -1586,9 +1586,9 @@ void urunSecimi(Kullanici &kullanici, int m_iKategori, int urunNo, int bedenNo, 
 	ifDosya11.open(bedenBilgiDosyasi);
 	while (ifDosya11 >> strData)  // verileri okur
 	{
-		if (deger2 == bedenNo) //aranan satýr buysa
+		if (deger2 == bedenNo) //aranan satÃ½r buysa
 		{
-			ifDosya11 >> strData; m_beden = strData; //ilgili satýrdaki bedeni alýyoruz sadece
+			ifDosya11 >> strData; m_beden = strData; //ilgili satÃ½rdaki bedeni alÃ½yoruz sadece
 			break;
 		}
 		else
@@ -1604,9 +1604,9 @@ void urunSecimi(Kullanici &kullanici, int m_iKategori, int urunNo, int bedenNo, 
 	ifDosya12.open(renkBilgiDosyasi);
 	while (ifDosya12 >> strData)  // verileri okur
 	{
-		if (deger3 == renkNo) //aranan satýr buysa
+		if (deger3 == renkNo) //aranan satÃ½r buysa
 		{
-			ifDosya12 >> strData; m_renk = strData; //ilgili satýrdaki rengi alýyoruz sadece
+			ifDosya12 >> strData; m_renk = strData; //ilgili satÃ½rdaki rengi alÃ½yoruz sadece
 			break;
 		}
 		else
