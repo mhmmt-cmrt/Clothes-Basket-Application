@@ -1,4 +1,4 @@
-//  this project was created by muhammet
+//  this project was created by muhammet cömert
 
 #include<iostream>
 #include<fstream>
