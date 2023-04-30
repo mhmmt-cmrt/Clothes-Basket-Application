@@ -1,4 +1,4 @@
-//  this project was created by muhammet
+//  this project was created by muhammet cÃ¶mert
 
 #include<iostream>
 #include<string>
@@ -8,16 +8,16 @@ class Kisi
 public:
 
 	Kisi();
-	Kisi(const std::string, const std::string, const std::string);  // constructure-destructure tanımları
+	Kisi(const std::string, const std::string, const std::string);  // constructure-destructure tanÃ½mlarÃ½
 	~Kisi();
 
-	void setAd(const std::string Ad) ;                              // isim setter getter tanımlamaları
+	void setAd(const std::string Ad) ;                              // isim setter getter tanÃ½mlamalarÃ½
 	std::string getAd() const;
 
-	void setSoyad(const std::string Soyad) ;                        // soyisim setter getter tanımlamaları
+	void setSoyad(const std::string Soyad) ;                        // soyisim setter getter tanÃ½mlamalarÃ½
 	std::string getSoyad() const;
 
-	void setTelefonNo(const std::string) ;                          // telefon setter getter tanımlamaları
+	void setTelefonNo(const std::string) ;                          // telefon setter getter tanÃ½mlamalarÃ½
 	std::string getTelefonNo() const;
 
 private:
@@ -31,54 +31,54 @@ class Kullanici : public Kisi
 public:
 
 	Kullanici();
-	Kullanici(const std::string ad, const std::string Soyad, const std::string telNo, const std::string _KullaniciAdı,
+	Kullanici(const std::string ad, const std::string Soyad, const std::string telNo, const std::string _KullaniciAdÃ½,
 			  const std::string ePosta, const std::string adresIlce,const std::string sifre, 
 		      const std::string dogumTarihi,  const std::string indirimKodu = "####");
 	~Kullanici();
 
-	void setKullaniciAdı(const std::string);         // Kullanici Adı setter getter tanımlamaları
-	std::string getKullaniciAdı() const;
+	void setKullaniciAdÃ½(const std::string);         // Kullanici AdÃ½ setter getter tanÃ½mlamalarÃ½
+	std::string getKullaniciAdÃ½() const;
 
-	void setEPosta(const std::string);               // E Posta setter getter tanımlamaları
+	void setEPosta(const std::string);               // E Posta setter getter tanÃ½mlamalarÃ½
 	std::string getEPosta() const ;
 
-	void setAdresIlce(const std::string);            // Adres Ilce setter getter tanımlamaları
+	void setAdresIlce(const std::string);            // Adres Ilce setter getter tanÃ½mlamalarÃ½
 	std::string getAdresIlce() const ;
 
-	void setSifre(const std::string);                // Sifre setter getter tanımlamaları
+	void setSifre(const std::string);                // Sifre setter getter tanÃ½mlamalarÃ½
 	std::string getSifre() const;
 
-	void setIndirimKodu(const std::string);          // Indirim Kodu setter getter tanımlamaları
+	void setIndirimKodu(const std::string);          // Indirim Kodu setter getter tanÃ½mlamalarÃ½
 	std::string getIndirimKodu() const;
 
-	void setDogumTarihi(const std::string);          // Dogum Tarihi setter getter tanımlamaları
+	void setDogumTarihi(const std::string);          // Dogum Tarihi setter getter tanÃ½mlamalarÃ½
 	std::string getDogumTarihi() const;
 
 private:
 
-	std::string kullaniciAdı;                        //uye degiskenler tanimlaniyor
+	std::string kullaniciAdÃ½;                        //uye degiskenler tanimlaniyor
 	std::string ePosta;
-	std::string adresİlce;
+	std::string adresÃlce;
 	std::string k_sifre;
 	std::string indirimKodu;
 	std::string dogumTarihi;
 };
-//-----------------------------kullanici sınıfı sonu----------------------
-class Yonetici : Kisi					              //yönetici sinifi kisi sinifindan miras alır
+//-----------------------------kullanici sÃ½nÃ½fÃ½ sonu----------------------
+class Yonetici : Kisi					              //yÃ¶netici sinifi kisi sinifindan miras alÃ½r
 {
 public:
-										              //constructure-destructure tanımları
+										              //constructure-destructure tanÃ½mlarÃ½
 	Yonetici();
 	Yonetici(const std::string ad, const std::string Soyad, 
 		     const std::string telNo, const std::string y_Sifre);
 
-	void setSifre(const std::string y_Sifre);         // setter-getter tanımları
+	void setSifre(const std::string y_Sifre);         // setter-getter tanÃ½mlarÃ½
 	std::string getSifre() const;
 
 private:
 	std::string y_Sifre;                              //uye degiskenler tanimlaniyor
 };
-//-----------------------------Yönetici sınıfı sonu----------------------
+//-----------------------------YÃ¶netici sÃ½nÃ½fÃ½ sonu----------------------
 class Zaman
 {
 	friend std::ostream& operator << (std::ostream& output, const Zaman& z);
@@ -90,10 +90,10 @@ public:
 	Zaman(int, int);					 // parametreli kurucu
 
 	void dakikaEkle(int _dakika);	     //saate dakika ekler->normal fonksiyon ile
-	Zaman operator + (int _dakika);	   	 //Saate Dakika Ekler->operator asırı yukleme ile
-	int operator - (Zaman &);			 //iki saat arası kaç dak kaldığını dakika cinsinden bulur.
-	bool operator < (Zaman&);			 //iki saat için hangisinin ilerde olduğunu dakikaya göre karşılaştırır.
-	void operator = (std::string);		 //bir saati diğerine atar
+	Zaman operator + (int _dakika);	   	 //Saate Dakika Ekler->operator asÃ½rÃ½ yukleme ile
+	int operator - (Zaman &);			 //iki saat arasÃ½ kaÃ§ dak kaldÃ½Ã°Ã½nÃ½ dakika cinsinden bulur.
+	bool operator < (Zaman&);			 //iki saat iÃ§in hangisinin ilerde olduÃ°unu dakikaya gÃ¶re karÃ¾Ã½laÃ¾tÃ½rÃ½r.
+	void operator = (std::string);		 //bir saati diÃ°erine atar
 
 	void setSaat(int _saat);			 //saati ayarlar
 	int getSaat() const;				 //saai dondurur
@@ -108,25 +108,25 @@ private:
 	int saat;							 //uye degiskenler tanimlaniyor
 	int dakika;
 };
-//-----------------------------Zaman sınıfı sonu----------------------
-class Kurye : Kisi								//kurye sinifi kisi sinifindan miras alır
+//-----------------------------Zaman sÃ½nÃ½fÃ½ sonu----------------------
+class Kurye : Kisi								//kurye sinifi kisi sinifindan miras alÃ½r
 {
 public:
 
-	Kurye();									//kurucu tanmları
+	Kurye();									//kurucu tanmlarÃ½
 	Kurye(std::string, std::string, std::string, Zaman& ,int);
 
-	void setSiparisNumaralari(int);			    //setter getter taımları
+	void setSiparisNumaralari(int);			    //setter getter taÃ½mlarÃ½
 	int  getSiparisNumaralari() const;
 	
-	void setDagitimBitisler(Zaman &);           //siparis_Baslangic setter getter tanımları
+	void setDagitimBitisler(Zaman &);           //siparis_Baslangic setter getter tanÃ½mlarÃ½
 	Zaman getDagitimBitisler() const;
 
 private:
 	int siparisNo;					            //uye degiskenler tanimlaniyor
-	Zaman dagitim_Bitişler;
+	Zaman dagitim_BitiÃ¾ler;
 };
-//-----------------------------Kurye sınıfı sonu------------------------
+//-----------------------------Kurye sÃ½nÃ½fÃ½ sonu------------------------
 class Kiyafet
 {
 public:
@@ -134,19 +134,19 @@ public:
 	Kiyafet();
 	Kiyafet(std::string kategori, std::string kiyafet_Adi, double fiyat, std::string beden, std::string renk);                              
 
-	void setKategori(std::string);           //kategori setter getter tanımı
+	void setKategori(std::string);           //kategori setter getter tanÃ½mÃ½
 	std::string getKategori() const;
 
-	void setKiyafetAdi(std::string);		 //KiyafetAdi setter getter tanımı
+	void setKiyafetAdi(std::string);		 //KiyafetAdi setter getter tanÃ½mÃ½
 	std::string getKiyafetAdi()const;
 
-	void setFiyat(double);					 //Fiyat setter getter tanımı
+	void setFiyat(double);					 //Fiyat setter getter tanÃ½mÃ½
 	double getFiyat()const;
 
-	void setBeden(std::string);              //Beden setter getter tanımı
+	void setBeden(std::string);              //Beden setter getter tanÃ½mÃ½
 	std::string getBeden()const;
 
-	void setRenk(std::string);               //Renk setter getter tanımı
+	void setRenk(std::string);               //Renk setter getter tanÃ½mÃ½
 	std::string getRenk()const;
 
 private:							         //uye degiskenler tanimlaniyor
@@ -156,7 +156,7 @@ private:							         //uye degiskenler tanimlaniyor
 	std::string beden;
 	std::string renk;
 };
-//-----------------------------Kiyafet sınıfı sonu----------------------
+//-----------------------------Kiyafet sÃ½nÃ½fÃ½ sonu----------------------
 class Siparis : public Kiyafet					// siparis sininfi kiyafet sinifindan miras alir
 {
 public:
@@ -164,25 +164,25 @@ public:
 	Siparis();							        // kurucu tanimlamalari
 	Siparis(int , double, Zaman &, Zaman &);            
 
-	void setSiparisNo(int);				        //SiparisNo setter getter tanımları
+	void setSiparisNo(int);				        //SiparisNo setter getter tanÃ½mlarÃ½
 	int getSiparisNo() const;
 
-	void setSiparisFiyat(double);               //siparis_Fiyat setter getter tanımları
+	void setSiparisFiyat(double);               //siparis_Fiyat setter getter tanÃ½mlarÃ½
 	double getSiparisFiyat() const;
 
-	void setSiparisBaslangic(Zaman &);          //siparis_Baslangic setter getter tanımları
+	void setSiparisBaslangic(Zaman &);          //siparis_Baslangic setter getter tanÃ½mlarÃ½
 	Zaman getSiparisBaslangic() const;
 
-	void setSiparisUlasim(Zaman &);             //siparis_Ulasim setter getter tanımları
+	void setSiparisUlasim(Zaman &);             //siparis_Ulasim setter getter tanÃ½mlarÃ½
 	Zaman getSiparisUlasim() const;
 
 private:
 	Zaman siparis_Baslangic;
-	Zaman siparis_Ulasim;//üye degiskenler tanimlaniyor
+	Zaman siparis_Ulasim;//Ã¼ye degiskenler tanimlaniyor
 	int siparis_No;
 	double siparis_Fiyat;
 };
-//-----------------------------Siparis sınıfı sonu----------------------
+//-----------------------------Siparis sÃ½nÃ½fÃ½ sonu----------------------
 void islemler(int);
 bool ePosta_Check(std::string ePosta);
 bool tarihKontrol(int gun, int ay, int yil);
